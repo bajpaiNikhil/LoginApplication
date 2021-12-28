@@ -8,6 +8,4 @@ class AuthenticationViewModelFactory( private val repository : AuthenticationRep
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return AuthenticationViewModel(repository) as T
     }
-
-
 }

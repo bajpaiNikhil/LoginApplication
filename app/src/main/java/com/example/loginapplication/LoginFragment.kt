@@ -11,7 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.loginapplication.data.AuthenticationDatabase
-import com.example.loginapplication.data.entities.TableItem
 import com.example.loginapplication.repositories.AuthenticationRepo
 import com.example.loginapplication.viewMode.AuthenticationViewModel
 import com.example.loginapplication.viewMode.AuthenticationViewModelFactory
@@ -22,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_login.*
 class LoginFragment : Fragment() {
 
 
-    lateinit var loginViewModel : AuthenticationViewModel
+    private lateinit var loginViewModel : AuthenticationViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,7 +72,6 @@ class LoginFragment : Fragment() {
             }
         })
     }
-
 
     private fun setUpViewModel() {
 

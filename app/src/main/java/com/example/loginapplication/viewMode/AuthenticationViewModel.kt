@@ -10,8 +10,14 @@ import kotlinx.coroutines.launch
 
 class AuthenticationViewModel( private val repository : AuthenticationRepo) : ViewModel() {
 
-    fun upset(item : TableItem) = CoroutineScope(Dispatchers.IO).launch {
-        repository.upset(item)
+//    fun upset(item : TableItem) = CoroutineScope(Dispatchers.IO).launch {
+//        repository.upset(item)
+//    }
+
+    fun upset(item: TableItem){
+        viewModelScope.launch {
+            repository.upset(item)
+        }
     }
 
     fun getAllUserData() = repository.getAllUserData()
