@@ -65,6 +65,7 @@ class LoginFragment : Fragment() {
                 if(enteredPassword == it[i].password || enteredEmail == it[i].email){
                     Log.d("LoginFragment" , "${it[i].password}   ${it[i].email}")
                     Toast.makeText(context  , "Access granted" ,Toast.LENGTH_LONG).show()
+                    findNavController().navigate(R.id.action_loginFragment_to_firebaseLoginFragment)
                 }else{
                     Log.d("LoginFragment" , " hehe ${it[i].password}   ${it[i].email}"  )
                     Toast.makeText(context , "incorrect password" , Toast.LENGTH_LONG).show()

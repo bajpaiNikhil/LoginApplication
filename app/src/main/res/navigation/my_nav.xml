@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_firebaseLoginFragment"
+            app:destination="@id/firebaseLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -22,5 +25,23 @@
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firebaseLoginFragment"
+        android:name="com.example.loginapplication.FirebaseLoginFragment"
+        android:label="fragment_firebase_login"
+        tools:layout="@layout/fragment_firebase_login" >
+        <action
+            android:id="@+id/action_firebaseLoginFragment_to_firebaseRegisterFragment"
+            app:destination="@id/firebaseRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firebaseRegisterFragment"
+        android:name="com.example.loginapplication.FirebaseRegisterFragment"
+        android:label="fragment_firebase_register"
+        tools:layout="@layout/fragment_firebase_register" >
+        <action
+            android:id="@+id/action_firebaseRegisterFragment_to_firebaseLoginFragment"
+            app:destination="@id/firebaseLoginFragment" />
     </fragment>
 </navigation>
