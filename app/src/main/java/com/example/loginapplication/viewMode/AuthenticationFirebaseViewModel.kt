@@ -16,7 +16,7 @@ class AuthenticationFirebaseViewModel(private  var repository : AuthenticationFi
     fun registerUserInFirebase(email:String , password:String){
         viewModelScope.launch {
             repository.registerUser(email , password)
-           userData =  repository.firebaseUserWeHave
+            userData =  repository.firebaseUserWeHave
         }
     }
     fun loginUserInFirebase(email:String , password : String){

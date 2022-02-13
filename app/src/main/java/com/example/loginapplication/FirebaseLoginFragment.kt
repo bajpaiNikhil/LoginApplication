@@ -45,19 +45,13 @@ class FirebaseLoginFragment : Fragment() {
             val firebaseViewModel = ViewModelProvider(this , AuthenticationFirebaseViewModelFactory(AuthenticationFirebaseRepo()))
                 .get(AuthenticationFirebaseViewModel::class.java)
 
-            var email  = firebaseLoginEmailTv.text.toString()
-            var password = firebaseLoginPasswordTv.text.toString()
+            val email  = firebaseLoginEmailTv.text.toString()
+            val password = firebaseLoginPasswordTv.text.toString()
             firebaseViewModel.loginUserInFirebase(email , password)
 
             firebaseViewModel.loginUserData.observe(viewLifecycleOwner , Observer {
                 Log.d("fbLoginFragment", "login Access")
             })
         }
-
-
-
-
-
-
     }
 }

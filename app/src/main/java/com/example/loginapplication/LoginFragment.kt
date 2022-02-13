@@ -62,7 +62,7 @@ class LoginFragment : Fragment() {
                 val enteredPassword = lPasswordTV.text.toString()
                 val enteredEmail = lEmailTV.text.toString()
 
-                if(enteredPassword == it[i].password || enteredEmail == it[i].email){
+                if(enteredPassword == it[i].password && enteredEmail == it[i].email){
                     Log.d("LoginFragment" , "${it[i].password}   ${it[i].email}")
                     Toast.makeText(context  , "Access granted" ,Toast.LENGTH_LONG).show()
 
